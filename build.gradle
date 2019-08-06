@@ -22,6 +22,12 @@ allprojects {
     }
 }
 
+allprojects {
+    tasks.withType(Javadoc) {
+        excludes = ['**/*.kt']
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
