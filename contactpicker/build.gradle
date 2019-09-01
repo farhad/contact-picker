@@ -3,14 +3,14 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.0"
+    buildToolsVersion "29.0.2"
 
 
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 100
-        versionName "1.0.0"
+        versionCode 200
+        versionName "2.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -32,40 +32,35 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
 repositories {
     mavenCentral()
     jcenter()
 }
 
-ext
-        {
-            bintrayRepo = 'maven'
-            bintrayName = 'contactpicker'
-            orgName = 'farhad'
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'contactpicker'
+    orgName = 'farhad'
 
-            publishedGroupId = 'io.github.farhad'
-            artifact = 'contactpicker'
-            libraryVersion = '1.0.0'
+    publishedGroupId = 'io.github.farhad'
+    artifact = 'contactpicker'
+    libraryVersion = '2.0.0'
 
-            libraryName = 'contactpicker'
-            libraryDescription = 'contact picker library for Android, without READ_CONTACTS permission and made for AndroidX'
+    libraryName = 'contactpicker'
+    libraryDescription = 'contact picker library for Android, without READ_CONTACTS permission and made for AndroidX'
 
-            siteUrl = 'https://github.com/farhad/contactpicker'
-            gitUrl = 'https://github.com/farhad/contactpicker.git'
+    siteUrl = 'https://github.com/farhad/contactpicker'
+    gitUrl = 'https://github.com/farhad/contactpicker.git'
 
-            developerId = 'farhad'
-            developerName = 'Farhad Faghihi'
-            developerEmail = 'ifarhadfaghihi@gmail.com'
+    developerId = 'farhad'
+    developerName = 'Farhad Faghihi'
+    developerEmail = 'ifarhadfaghihi@gmail.com'
 
-            licenseName = 'GNU General Public License v3.0'
-            licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-            allLicenses = ["GPL-3.0"]
-        }
+    licenseName = 'GNU General Public License v3.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["GPL-3.0"]
+}
 
 
 apply from: rootProject.file('gradle/install.gradle')

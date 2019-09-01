@@ -10,7 +10,7 @@
         tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/button_pick"
             android:text="Open Picker!"
             android:textAllCaps="false"
             android:layout_width="wrap_content"

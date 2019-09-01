@@ -11,11 +11,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button.setOnClickListener {
-            ContactPicker.create(
-                this,
-                { text.text = "${it.name}: ${it.number}" },
-                { text.text = it.localizedMessage })?.start()
+        button_pick.setOnClickListener {
+
+            val contactPicker: ContactPicker? = ContactPicker.create(
+                activity = this,
+                onContactPicked = { text.text = "${it.name}: ${it.number}" },
+                onFailure = { text.text = it.localizedMessage })
+
+            contactPicker?.pick() // call this to open the picker app chooser
         }
     }
 }

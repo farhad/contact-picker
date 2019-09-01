@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/farhad/maven/contactpicker/images/download.svg) ](https://bintray.com/farhad/maven/contactpicker/_latestVersion) [![HitCount](http://hits.dwyl.io/farhad/contact-picker.svg)](http://hits.dwyl.io/farhad/contact-picker)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-contact--picker-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/7814) [ ![Download](https://api.bintray.com/packages/farhad/maven/contactpicker/images/download.svg) ](https://bintray.com/farhad/maven/contactpicker/_latestVersion) [![HitCount](http://hits.dwyl.io/farhad/contact-picker.svg)](http://hits.dwyl.io/farhad/contact-picker)
 
 ```groovy
 repositories {
@@ -16,16 +16,12 @@ You can use this library in all Activities and Fragments. Please be advised that
 To use in your Activity/Fragment :
 
 ```kotlin
-  
-  ContactPicker.create( activity,
-                { // callback for success - an instance of [PickedContact] class is returned 
-                	Log.d("contactpicker", it.name + ": " + it.number)
-                },
-                { // callback for failures returing a throwable
-                	Log.d("contactpicker", it.localizesMessage })?.start()
-        }
+          val contactPicker: ContactPicker? = ContactPicker.create(
+            activity = this,
+            onContactPicked = { Log.d("TAG", it.name + ": " + it.number) },
+            onFailure = { Log.d("TAG", it.localizedMessage) })
         
-        
+        contactPicker?.pick()      
 ```
 
 If the user chooses a contact from the picker window, an instance of `PickedContact` class is returned to the first callback/lambda passed to `ContactPicker.create()` which has `number` and `name` properties.
