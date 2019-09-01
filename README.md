@@ -16,12 +16,12 @@ You can use this library in all Activities and Fragments. Please be advised that
 To use in your Activity/Fragment :
 
 ```kotlin
-          val contactPicker: ContactPicker? = ContactPicker.create(
+          val picker: ContactPicker? = ContactPicker.create(
             activity = this,
             onContactPicked = { Log.d("TAG", it.name + ": " + it.number) },
             onFailure = { Log.d("TAG", it.localizedMessage) })
         
-        contactPicker?.pick()      
+          picker?.pick()      
 ```
 
 If the user chooses a contact from the picker window, an instance of `PickedContact` class is returned to the first callback/lambda passed to `ContactPicker.create()` which has `number` and `name` properties.

@@ -38,29 +38,30 @@ repositories {
     jcenter()
 }
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'contactpicker'
-    orgName = 'farhad'
+ext
+        {
+            bintrayRepo = 'maven'
+            bintrayName = 'contactpicker'
+            orgName = 'farhad'
 
-    publishedGroupId = 'io.github.farhad'
-    artifact = 'contactpicker'
-    libraryVersion = '2.0.0'
+            publishedGroupId = 'io.github.farhad'
+            artifact = 'contactpicker'
+            libraryVersion = '2.0.0'
 
-    libraryName = 'contactpicker'
-    libraryDescription = 'contact picker library for Android, without READ_CONTACTS permission and made for AndroidX'
+            libraryName = 'contactpicker'
+            libraryDescription = 'contact picker library for Android, without READ_CONTACTS permission and made for AndroidX'
 
-    siteUrl = 'https://github.com/farhad/contactpicker'
-    gitUrl = 'https://github.com/farhad/contactpicker.git'
+            siteUrl = 'https://github.com/farhad/contactpicker'
+            gitUrl = 'https://github.com/farhad/contactpicker.git'
 
-    developerId = 'farhad'
-    developerName = 'Farhad Faghihi'
-    developerEmail = 'ifarhadfaghihi@gmail.com'
+            developerId = 'farhad'
+            developerName = 'Farhad Faghihi'
+            developerEmail = 'ifarhadfaghihi@gmail.com'
 
-    licenseName = 'GNU General Public License v3.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["GPL-3.0"]
-}
+            licenseName = 'GNU General Public License v3.0'
+            licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+            allLicenses = ["GPL-3.0"]
+        }
 
 
 apply from: rootProject.file('gradle/install.gradle')
